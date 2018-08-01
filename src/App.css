@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+
+html, body{
+margin: 0;
+padding: 0;
+background: #F1F3F4;
+}
+
+.App {
+  font-family: 'Roboto', sans-serif;
+}
+
+.App-header {
+  text-align: center;
+  background-image: url('./bg1.png');
+  height: 1244px;
+  background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+  color: white;
+}
+
+.App-title {
+  font-size: 60px;
+  letter-spacing: 2px;
+  margin: 250px auto;
+  display: inline-block;
+  font-weight: 100;
+}
+
+.Case{
+  width: 80%;
+  max-width: 950px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px;
+  margin: 50px auto;
+  overflow: auto;
+}
+
+.Case-image{
+  float: left;
+  margin-right: 10%;
+  width: 40%;
+}
+.Case-title{
+  font-size: 24px;
+  letter-spacing: -.29px;
+  line-height: 34px;
+font-weight: 100;
+}
+.Case-details{
+  font-weight: 100;
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: .24px;
+  line-height: 30px;
+}
