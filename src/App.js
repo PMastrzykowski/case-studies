@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Waypoint from 'react-waypoint';
 
 const cases = [
   {
@@ -35,13 +36,44 @@ class App extends Component {
 class Case extends Component {
   render() {
     return (
+      <IsVisible>
+      {({ isInView }) =>
       <div className="Case">
-      
         <img src={this.props.case.img} className="Case-image"/>
         <div>
-        <div className="Case-title">{this.props.case.title}</div>
+        <div className="Case-title">{isInView? this.props.case.title : 'title'}</div>
         <div className="Case-details">{this.props.case.details}</div>
         </div>
+      </div>
+      }
+      </IsVisible>
+    );
+  }
+}
+
+class IsVisible extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+        isInView: false
+      }
+      this.onEnter=this.onEnter.bind(this);
+  }
+  onEnter({ previousPosition }){
+    if(previousPosition === Waypoint.below) {
+      console.log('scroll')
+      this.setState({
+        isInView: true
+      });
+    }
+  }
+  render() {
+    
+    return (
+      <div>
+      {this.props.children({isInView: this.state.isInView})}
+      <Waypoint onEnter={this.onEnter}>
+      </Waypoint>
       </div>
     );
   }
