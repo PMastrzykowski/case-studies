@@ -2,6 +2,7 @@
   "name": "case-studies",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://pmastrzykowski.github.io/case-studies",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "gsap": "^2.0.1",
@@ -16,7 +17,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "homepage": "https://pmastrzykowski.github.io/case-studies"
+    "eject": "react-scripts eject"
   }
 }
