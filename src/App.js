@@ -19,11 +19,11 @@ const cases = [
 },{
   title: 'Equidistances',
   img: './equidistances.svg',
-  details: 'Allows users to add Google, Typekit or custom fonts to their projects. Project required managing asynchronous actions, states, animations, and file uploading. Except for the above, I wrote a compatibility script adjusting all existing users’ projects to the new data formats.'
+  details: 'Whenever you want to make a grid or just position items in the same distance, equidistances come with help. Dragged item snaps vertically or horizontally to invisible guides basing on distances between them. Snap points and equidistant guides are calculated and displayed dynamically while dragging. The functionality was applied to single items, groups and multiselections.'
 },{
   title: 'Smart guides',
   img: './smart_guides.svg',
-  details: 'I worked with an interesting bug occuring only in Safari. A white screen showed up for a milisecond just before any screen transition (Greensock) was executed. I realized that we display a new screen as a block and then run the animation. The solution was simple (manipulating opacity), but I learnt that some browsers (Safari) are more accurate than others.'
+  details: 'Snapping to the existing items (actually to their top, bottom, left, right or center) is possible thank to the smart guides. When I started refactoring this functionality, smart guides were just full length or height lines on a front layer of canvas. Now these guide lines connect all items with the same snapping points and show distance between dragged item, group or multiselection and the closest item. Making this feature work, I had to deal with trigonometry and zooming.'
 },
 ]
 class App extends Component {
@@ -57,7 +57,10 @@ class App extends Component {
       </div>
         </div>
         {cases.map(item => <Case key={item.title} case={item}/>)}
-        <br/><br/><br/><br/>
+        <div className="Footer-content">
+          <div className="Footer-for-more">For more details please visit my</div>
+          <div className="Footer-linkedin"><a href="https://www.linkedin.com/in/pmastrzykowski/">LinkedIn</a></div>
+        </div>
       </div>
     );
   }
@@ -97,7 +100,7 @@ class IsVisible extends Component {
     }
   }
   animate(){
-    TweenMax.to(this.case, .4, {opacity: 1, y: -30})
+    TweenMax.to(this.case, .4, {opacity: 1, y: -50})
   }
   render() {
     return (
