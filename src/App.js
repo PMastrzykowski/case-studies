@@ -23,7 +23,7 @@ const cases = [
 },{
   title: 'Smart guides',
   img: './smart_guides.svg',
-  details: 'Snapping to the existing items (actually to their top, bottom, left, right or center) is possible thank to the smart guides. When I started refactoring this functionality, smart guides were just full length or height lines on a front layer of canvas. Now these guide lines connect all items with the same snapping points and show distance between dragged item, group or multiselection and the closest item. Making this feature work, I had to deal with trigonometry and zooming.'
+  details: 'Snapping to the existing items (actually to their top, bottom, left, right or center) is possible thank to the smart guides. When I started refactoring this functionality, smart guides were just full length lines on a front layer of canvas. Now these guide lines connect all items with the same snapping points and show distance between dragged item, group or multiselection and the closest item. Making this feature work, I had to deal with trigonometry and zooming.'
 },
 ]
 class App extends Component {
@@ -43,18 +43,18 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-        <div className="App-center">
-        <div><img src="./proto_logo.svg" ref={e => this.proto_logo = e}/></div>
-        <div className="App-title">
-        <div className="App-subtitle1" ref={e => this.subtitle1 = e}>case studies</div>
-        <div className="App-subtitle2" ref={e => this.subtitle2 = e}>Patryk Mastrzykowski</div>
-        </div>
-      </div>
-      <div className="App-stars">
-      <div className="Star1 Star" ref={e => this.star1 = e}></div>
-      <div className="Star2 Star" ref={e => this.star2 = e}></div>
-      <div className="Star3 Star" ref={e => this.star3 = e}></div>
-      </div>
+          <div className="App-center">
+            <div><img src="./proto_logo.svg" ref={e => this.proto_logo = e}/></div>
+            <div className="App-title">
+              <div className="App-subtitle1" ref={e => this.subtitle1 = e}>case studies</div>
+              <div className="App-subtitle2" ref={e => this.subtitle2 = e}>Patryk Mastrzykowski</div>
+            </div>
+          </div>
+          <div className="App-stars">
+            <div className="Star1 Star" ref={e => this.star1 = e}></div>
+            <div className="Star2 Star" ref={e => this.star2 = e}></div>
+            <div className="Star3 Star" ref={e => this.star3 = e}></div>
+          </div>
         </div>
         {cases.map(item => <Case key={item.title} case={item}/>)}
         <div className="Footer-content">
