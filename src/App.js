@@ -44,7 +44,16 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <div className="App-center">
-            <div><img src="./proto_logo.svg" ref={e => this.proto_logo = e}/></div>
+            <div>
+            <svg ref={e => this.proto_logo = e} width="141px" height="141px" viewBox="0 0 141 141" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                  <g id="Group" fill="#FFFFFF">
+                      <path d="M70.5,141 C31.5639251,141 0,109.436075 0,70.5 C0,31.5639251 31.5639251,0 70.5,0 C109.436075,0 141,31.5639251 141,70.5 C141,109.436075 109.436075,141 70.5,141 Z M70.5,129 C102.808658,129 129,102.808658 129,70.5 C129,38.1913421 102.808658,12 70.5,12 C38.1913421,12 12,38.1913421 12,70.5 C12,102.808658 38.1913421,129 70.5,129 Z" id="Combined-Shape"></path>
+                      <path d="M70.5,28 C96,56 85.5,86.5 84,92.5 C86,96.5 91,107 91,113.5 C87.6666667,109.166667 83.3333333,106.166667 78,104.5 C75,109.166667 72.5,112.166667 70.5,113.5 C67.5,112.5 66,108 63.5,104.5 C58.8333333,105.166667 54.3333333,108.166667 50,113.5 C50.6666667,104.166667 53.1666667,97.1666667 57.5,92.5 C44.5,58.5 66,31 70.5,28 Z M71,71 C75.418278,71 79,67.418278 79,63 C79,58.581722 75.418278,55 71,55 C66.581722,55 63,58.581722 63,63 C63,67.418278 66.581722,71 71,71 Z" id="Combined-Shape"></path>
+                  </g>
+              </g>
+          </svg>
+            </div>
             <div className="App-title">
               <div className="App-subtitle1" ref={e => this.subtitle1 = e}>case studies</div>
               <div className="App-subtitle2" ref={e => this.subtitle2 = e}>Patryk Mastrzykowski</div>
